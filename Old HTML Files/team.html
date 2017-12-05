@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TommComm</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="flexslider.css" type="text/css">
+	<link rel="stylesheet" href="style.css" />
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+  			acc[i].onclick = function() {
+    			this.classList.toggle("active");
+    			var panel = this.nextElementSibling;
+    			if (panel.style.maxHeight){
+      				panel.style.maxHeight = null;
+    			} else {
+      			panel.style.maxHeight = panel.scrollHeight + "px";
+    			} 
+  			}
+		}
+	</script>
+
+	<script>
+		$(document).ready(function() {
+    		function close_accordion_section() {
+        		$('.accordion .accordion-section-title').removeClass('active');
+        		$('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    		}
+ 
+    		$('.accordion-section-title').click(function(e) {
+        		// Grab current anchor value
+        		var currentAttrValue = $(this).attr('href');
+ 
+        		if($(e.target).is('.active')) {
+            		close_accordion_section();
+        		}else {
+            		close_accordion_section();
+ 
+            		// Add active class to section title
+            		$(this).addClass('active');
+            		// Open up the hidden content panel
+            		$('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+        		}
+ 
+        		e.preventDefault();
+    		});
+		});
+	</script>
+
+	<script>
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+
+</head> 
+<body>
+	<a name="top"></a>
+
+	<div id="hamburger"><a href="#nav" id="hicon">&#x2261;</a>
+	<ul id="nav">
+		<div id="logo">
+			<a href="index.html"><img src="images/logo.png" class="logo"></a>
+		</div>
+		<li><a href="#about">ABOUT</a>
+			<ul>
+				<li><a href="story.html">OUR STORY</a></li>
+				<li><a href="team.html">OUR TEAM</a></li>
+			</ul>
+		</li>
+		<li><a href="#services">SERVICES</a>
+			<ul>
+				<li><a href="services.html">FULL LIST</a></li>
+			</ul>
+		</li>
+		<li><a href="#clients">CLIENTS</a>
+			<ul>
+				<li><a href="clients.html">FEATURED CLIENTS</a></li>
+			</ul>
+		</li>
+		<li><a href="#employment">STUDENTS</a></li>
+		<li><a href="#contact">CONTACT</a></li>
+	</ul>
+</div>
+	
+	<div id="employee-page">
+		<h2>OUR TEAM</h2>
+			<p>TommComm is led by talented students who will be the future of the communications field. Students are held to the highest standards and understand the real impact their work has. Our clients deserve the very best, and we hire only innovative, strategic, principled and dependable students.</p>
+
+				<a name="claire" class="test"></a>
+				<img src="images/team1.jpg" class="employee">
+					<div id="employee_text" class="employee_text">
+					<p class="team_heading">Director</p>
+					<p><strong>Claire Rossez</strong></p>
+					<p>Claire is a St. Thomas senior double majoring in Communication and Journalism (COJO) and English, and minoring in French.  She would love to have a career that combines her passion for writing with her love of working in teams.  Although she wants to get some work experience first, Claire hopes to go to grad school someday to get a Masters in either communication or business.</p>
+
+					<p>Being a full-time student with multiple on-campus jobs keeps Claire busy, but she enjoys spending time with friends and exploring the Twin Cities in her time off.  She&#8217;s always up for talking about books, movies, or popular TV shows (but don&#8217;t get her started on the ending of How I Met Your Mother&mdash;still too soon).  She loves to laugh, especially at bad dad jokes and corny puns, and tries to find the humor in everything.</p>
+					</div>	
+	
+				<a name="sam" class="test"></a>
+				<img src="images/team2.jpg" class="employee">
+					<div id="employee_text" class="employee_text">
+					<p class="team_heading">Assistant Director</p>
+					<p><strong>Sam Shay</strong>
+					<p>Sam is a Communications and Journalism major (not so much the journalism part, however) as well as a Catholic Studies major, and he loves studying each subject. He commonly tells people when they ask why he&#8217;s in school that, while he loves talking, he should learn how to do it and when to stop. His other passions are writing, listening to music, running, and video gaming. He is excited about his role in TommComm as Assistant Director, and looks forward to working with the TommComm team!</p>
+					</div>
+				
+				<a name="madison" class="test"></a>
+				<img src="images/team3.jpg" class="employee">
+					<div id="employee_text" class="employee_text">
+					<p class="team_heading">Creative Director</p>
+					<p><strong>Madison Lehn</strong></p>
+					</div>
+			
+				<a name="monica" class="test"></a>
+				<img src="images/team4.jpg" class="employee">
+					<div id="employee_text" class="employee_text">
+					<p class="team_heading">Project Manager</p>
+					<p><strong>Monica Gagne</strong></p>
+					<p>Monica is a Junior at the University of St. Thomas pursuing a major in Communications and Journalism. Her track is leading her towards a field of Advertising and Project Management. After graduating in the winter of 2017 she hopes to get her Project Management certification to work on large corporate campaigns and advertisements.</p>
+
+					<p>Originally Monica is from Des Moines, Iowa and moved to the Twin Cities for school and to experience life in a big city. She also participates in extracurricular activities like choir, volunteering, and faith groups. In her free time she likes to do yoga, read, binge watch Netflix shows, and catch up with friends over coffee.</p>
+					</div>	
+
+				<h2>Contributors</h2>
+				<div id="contributor-flex">
+				<div class="contributor">
+					<img src="images/team5.jpg">
+					<div class="contributor-text">
+						<p class="team_heading">WEB DESIGNER</p>
+						<p><strong>Alyssa Heitfeld</strong></p>
+						<p>Alyssa graduated from Macalester College in May 2017. Her interest in English and Communications led her to Alyssa graduated from Macalester College in May 2017. Her interest in English and Communications led her to Alyssa graduated from Macalester College in May 2017. Her interest in English and Communications led her to Alyssa graduated from Macalester College in May 2017. Her interest in English and Communications led her to Alyssa graduated from Macalester College in May 2017. Her interest in English and Communications led her to Alyssa graduated from Macalester College in May 2017. Her interest in English and Communications led her to </p>
+					</div>
+				</div>
+			
+			<div class="contributor">
+					<img src="images/team6.jpg" style="object-fit:cover;">
+					<div class="contributor-text">
+						<p class="team_heading">WEB DESIGNER</p>
+						<p><strong>Anne Kopas</strong></p>
+						<p>Anne is a St. Thomas senior double-majoring in English and Communications, minoring in psychology. She came into college thinking that the Communications major was just a side gig to keep her away from life as a starving novelist, so she&#8217; not quite sure how she got here. She&#8217;s the web manager for TommieMedia, and she&#8217;s been involved in the local publishing scene through internships with Minnesota Business Magazine and Redleaf Press. At any given time, there&#8217;s an extremely high probability that she is blasting her music, running, over her head in novel revisions, drinking tea, or some combination thereof.</p>
+					</div>	
+					</div>	
+			<div class="contributor">
+					<img src="images/pheasant.jpg" style="object-fit:cover;">
+					<div class="contributor-text">
+						<p class="team_heading">TITLE</p>
+						<p><strong>Snazzy Bird</strong></p>
+						<p>The snazzy bird is just chilling here until we get actual copy and contributor photos. For now, let&#8217;s just let him be cool and take up space. This text is also taking up space. Just ignore it. The snazzy bird is just chilling here until we get actual copy and contributor photos. For now, let&#8217;s just let him be cool and take up space. This text is also taking up space. Just ignore it.</p>
+					</div>	
+					</div>	
+			<div class="contributor">
+					<img src="images/pheasant.jpg" style="object-fit:cover;">
+					<div class="contributor-text">
+						<p class="team_heading">TITLE</p>
+						<p><strong>Snazzy Bird</strong></p>
+						<p>The snazzy bird is just chilling here until we get actual copy and contributor photos. For now, let&#8217;s just let him be cool and take up space. This text is also taking up space. Just ignore it. The snazzy bird is just chilling here until we get actual copy and contributor photos. For now, let&#8217;s just let him be cool and take up space. This text is also taking up space. Just ignore it.</p>
+					</div>	
+					</div>
+					</div><!--contributor flex-->		
+		</div>
+
+
+
+		<div id="footer">
+			<div id="footer_flex">
+				<div id="column_x1">
+					<ul>
+						<li><a name="About" href="#about">About</a></li>
+						<li><a name="story" href="story.html">Our Story</a></li>
+						<li><a name="team" href="#team">Our Team</a></li>
+						<li><a name="services" href="#services">Services</a></li>
+						<br>
+					</ul>
+				</div>
+				<div id="column_x2">
+					<ul>
+						<li><a name="clients" href="#clients">Clients</a></li>
+						<li><a name="employment" href="#employment">Students</a></li>
+						<li><a name="FAQ" href="#FAQ">FAQ</a></li>
+						<li><a name="contact" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div id="column_y">
+					<p>A new student-led communications agency</p>
+					<br>
+					<a class="smi" href="mailto:tommiecommunications@gmail.com">m</a>
+					<a class="smi" href="https://www.facebook.com" target="_blank">f</a>
+					<a class="smi" href="https://www.instagram.com" target="_blank">i</a>
+				</div>
+				<div id="column_z">
+						<p>&#169;TommComm 2017</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+</html>

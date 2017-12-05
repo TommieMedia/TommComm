@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TommComm</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="flexslider.css" type="text/css">
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" charset="utf-8">
+  		$(window).load(function() {
+    		$('.flexslider').flexslider({
+    			slideshowSpeed: 3000,
+    			animationSpeed: 1000,
+    			controlNav: false,
+    			directionNav: false
+    		}); //end of flexsider
+    		$("#hicon" ).click(function() {
+    			$("#nav").toggle("slow");
+    		});
+  		});
+	</script>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+  			acc[i].onclick = function() {
+    			this.classList.toggle("active");
+    			var panel = this.nextElementSibling;
+    			if (panel.style.maxHeight){
+      				panel.style.maxHeight = null;
+    			} else {
+      			panel.style.maxHeight = panel.scrollHeight + "px";
+    			} 
+  			}
+		}
+	</script>
+
+	<script>
+		$(document).ready(function() {
+    		function close_accordion_section() {
+        		$('.accordion .accordion-section-title').removeClass('active');
+        		$('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    		}
+ 
+    		$('.accordion-section-title').click(function(e) {
+        		// Grab current anchor value
+        		var currentAttrValue = $(this).attr('href');
+ 
+        		if($(e.target).is('.active')) {
+            		close_accordion_section();
+        		}else {
+            		close_accordion_section();
+ 
+            		// Add active class to section title
+            		$(this).addClass('active');
+            		// Open up the hidden content panel
+            		$('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+        		}
+ 
+        		e.preventDefault();
+    		});
+		});
+	</script>
+
+	<script>
+		$(function() {
+		  $('a[href*="#"]:not([href="#"]):not([href="#accordion-1"]):not([href="#accordion-2"]):not([href="#accordion-3"]):not([href="#accordion-4"]):not([href="#accordion-5"]):not([href="#accordion-6"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+
+</head> 
+<body>
+<?php include('header.php') ?>
+
+	<div id="wrapper">
+		<div id ="about">
+	<div id="image_banner">
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<a href="about.html"><img src="images/introduction.png" class="banner"></a>
+				</li>
+				<li>
+					<a href="about.html"><img src="images/aboutslide.png" class="banner"></a>
+				</li>
+				<li>
+					<a href="clients.html"><img src="images/teamtext.png" class="banner"></a>
+				</li>
+				<li>
+					<a href="index.html#employment"><img src="images/joinourteam.png" class="banner"></a>
+				</li>
+				<li>
+					<a href="index.html#employment"><img src="images/flag.JPG" class="banner"></a>
+				</li>
+			</ul>
+		</div>	
+	</div>
+
+				<div class="homepage-buttons">
+					<a href="story.html"><button class="button">Our Story</button></a>
+					<br>
+					<a href="services.html"><button class="button">For Clients</button></a>
+					<a href="employment.html"><button class="button">For Students</button></a>
+			</div>
+	</div>
+<!-- 		<div id="services">
+		<h2><a name="services" href="#top">SERVICES</a></h2>
+			<img src="images/tony.jpg" class="services_image">
+				<div id="services_text" class="services_text">
+					<p style="text-indent:0em;">We offer a variety of communication and branding services, including:</p>
+					<ul>
+						<li>Public Relations</li>
+						<li>Advertising</li>
+						<li>Social Media</li>
+						<li>Videography</li>
+						<li>Graphic Design</li>
+						<li>Photography</li>
+					</ul>
+				</div>
+			<div class="homepage-buttons">
+				<a href="services.html"><button class="button">Learn More</button></a>
+			</div>
+		</div> -->
+
+<!-- 		<div id="clients">
+		<h2><a name="clients" href="#top">CLIENTS</a></h2>	
+			<div id="clients_flex">
+				<div id="client1">
+					<a href="clients.html"><img src="images/clienttony.png" class="client"></a>
+				</div>
+
+				<div id="client2">
+					<a href="clients.html"><img src="images/client1.jpg" class="client"></a>
+				</div>
+
+				<div id="client3">
+					<a href="clients.html"><img src="images/Ascension-Written-Logo.png" class="client"></a>
+				</div>
+			</div>
+			<div class="homepage-buttons">
+			<a href="clients.html"><button class="button">Meet Our Clients</button></a>
+		</div>
+		</div> -->
+
+		<div id="employment">
+		<h2><a name="employment" href="#top">STUDENTS</a></h2>
+			<p>Interested in the strategic communications field but don't know where to start? Looking to get more involoved at St. Thomas and give back to the community? Want an on-campus job that will actually give ou valuable work experience?</p>
+			<p>If you&#8217;re passionate about creativity, teamwork, and making meaningful connections with real-life community partners, TommComm is the perfect place for you. We hire students who want to apply their writing, design, and other communications skills to projects that will have a lasting impact for our clients</p>
+		</div>
+
+		<div id="FAQ">
+			<div id="accordion" class="accordion">
+			<h3><a name="FAQ" href="#top">FAQ</h3>
+	    		<div class="accordion-section">
+	        		<a class="accordion-section-title" href="#accordion-1">Who can apply for TommComm positions?</a>
+		        		<div id="accordion-1" class="accordion-section-content">
+		            		<p>Any St. Thomas student is welcome to apply at TommComm! You don't have to be a COJO major&#8217;just a hard worker with a passion for advertising.</p>
+		        		</div>
+	        		<a class="accordion-section-title" href="#accordion-2">When does the hiring process begin?</a>
+		        		<div id="accordion-2" class="accordion-section-content">
+		            		<p>TommComm hires new employees every semester, as well as based on demand. Send us an email if you&#8217;d like to receive all of the latest updates.</p>
+		        		</div>
+	        		<a class="accordion-section-title" href="#accordion-3">What positions are open?</a>
+		        		<div id="accordion-3" class="accordion-section-content">
+		            		<p>TommComm hires students for its entire staff every year, with certain additions scattered here and there. Positions include but are not limited to: Director, Account Manager, Project Manager, and Creative Director.</p>
+		        		</div>
+	        		<a class="accordion-section-title" href="#accordion-4">I&#8217;m new to COJO and haven't taken many classes; can I still apply?</a>
+		        		<div id="accordion-4" class="accordion-section-content">
+		            		<p>Yes!  We're always looking for fresh talent, and we keep a list of interested students to contact when openings come up. Even if you feel unqualified, applying and interviewing can be a great, real-life learning experience.</p>
+		        		</div>
+	        		<a class="accordion-section-title" href="#accordion-5">What are the hours and pay like?</a>
+		        		<div id="accordion-5" class="accordion-section-content">
+		            		<p>Hours vary by position and project status. You may work five hours one week, and then the next. Students are all paid the same hourly wage.</p>
+		        		</div>
+	   		 		</div>
+				</div>
+			</div>
+
+		<div id ="team">
+		<h2>OUR TEAM</h2>
+			<div id="employee_flex">
+				<div id="employee">
+					<img src="images/team1.jpg" class="team">
+						<p><a href="team.html#claire"><strong>Claire Rossez,</strong> <i>Director</i></a></p>
+						
+				</div>
+				<div id="employee">
+					<img src="images/team2.jpg" class="team">
+						<p><a href="team.html#sam"><strong>Sam Shay,</strong> <i>Assistant Director</i></a></p>
+						
+				</div>
+				<div id="employee">
+					<img src="images/team3.jpg" class="team">
+						<p><a href="team.html#madison"><strong>Madison Lehn, </strong><i>Creative Director</i></a></p>
+
+				</div>
+				<div id="employee">
+					<img src="images/team4.jpg" class="team">
+						<p><a href="team.html#monica"><strong>Monica Gagne,</strong> <i>Project Manager</i></a></p>
+				</div>
+			</div>
+			<div class="homepage-buttons">
+				<a href="team.html"><button class="button">Meet Our Team</button></a>
+			</div>
+		</div>
+
+			<div id="contact">
+				<h2><a name="contact" href="#top">CONTACT</a></h2>
+					<p>Have a question about a project? Interested in applying for a TommComm position? Want to meet an employee in person? Send an email to tommiecommunications@gmail.com, and we&#8217;ll respond within 24 hours.</p>
+
+				<div id="form">
+				<form action="https://formspree.io/tommiecommunications@gmail.com" method="post">
+					<input type="hidden" name="_next" value="thanks.html" />
+					<input type="text" name="_gotcha" style="display:none"/>
+					<ul>
+						<li>
+							<input type="text" name="fullname" placeholder="Name" size="30" />
+						</li>
+						<br>
+						<li>
+							<input type="text" name="_replyto" placeholder="Email" size="30" />
+						</li>
+						<br>
+						<li>	
+							<input type="text" name="_subject" placeholder="Subject" size="30"/>
+						</li>
+						<br>
+						<li>
+							<textarea name="order" placeholder="Message"></textarea>
+						</li>
+						<br>
+						<li>
+							<input type="submit" value="Submit" class="button_form" />
+						</li>
+						<br>
+					</ul>
+				</form>
+				</div>
+			</div>
+
+
+<?php include('footer.php') ?>
+
+	</div>
+</html>

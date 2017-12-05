@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TommComm</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="flexslider.css" type="text/css">
+	<link rel="stylesheet" href="style.css" />
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+  			acc[i].onclick = function() {
+    			this.classList.toggle("active");
+    			var panel = this.nextElementSibling;
+    			if (panel.style.maxHeight){
+      				panel.style.maxHeight = null;
+    			} else {
+      			panel.style.maxHeight = panel.scrollHeight + "px";
+    			} 
+  			}
+		}
+	</script>
+
+	<script>
+		$(document).ready(function() {
+    		function close_accordion_section() {
+        		$('.accordion .accordion-section-title').removeClass('active');
+        		$('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    		}
+ 
+    		$('.accordion-section-title').click(function(e) {
+        		// Grab current anchor value
+        		var currentAttrValue = $(this).attr('href');
+ 
+        		if($(e.target).is('.active')) {
+            		close_accordion_section();
+        		}else {
+            		close_accordion_section();
+ 
+            		// Add active class to section title
+            		$(this).addClass('active');
+            		// Open up the hidden content panel
+            		$('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+        		}
+ 
+        		e.preventDefault();
+    		});
+		});
+	</script>
+
+	<script>
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+
+</head> 
+<body>
+	<a name="top"></a>
+	
+	<div id="hamburger"><a href="#nav" id="hicon">&#x2261;</a></div>
+	<ul id="nav">
+		<div id="logo">
+			<a href="index.html"><img src="images/logo.png" class="logo"></a>
+		</div>
+		<li><a href="#about">ABOUT</a>
+			<ul>
+				<li><a href="story.html">OUR STORY</a></li>
+				<li><a href="team.html">OUR TEAM</a></li>
+			</ul>
+		</li>
+		<li><a href="#services">SERVICES</a>
+			<ul>
+				<li><a href="services.html">FULL LIST</a></li>
+			</ul>
+		</li>
+		<li><a href="#clients">CLIENTS</a>
+			<ul>
+				<li><a href="clients.html">FEATURED CLIENTS</a></li>
+			</ul>
+		</li>
+		<li><a href="#employment">STUDENTS</a></li>
+		<li><a href="#contact">CONTACT</a></li>
+	</ul>
+	<div id="customers">
+	<br>
+	<br>
+	<br>
+		<h4>The Social Innovation Collaboratory</h4>
+		<div id= "clients_flex">
+			<div id="clients1">
+				<img src="images/bridge.jpg" class="client_image">
+			</div>
+			<div id="clients2">
+				<img src="images/bridge.jpg" class="client_image">
+			</div>
+			<div id="clients3">
+				<img src="images/bridge.jpg" class="client_image">
+			</div>
+		</div>
+		<p>The Social Innovation Collaboratory is an organization at St. Thomas that fosters social innovation by creating relationships between the university, students, and the community. They work to prove that everyone has the ability to be a changemaker, or in their words, "Someone who has the freedom, confidence, grit, and societal support to address social problems and change&mdash;all for the common good."</p>
+		<p>When TommComm was still a classroom project, the Social Innovation Collaboratory was our first client. Our small team of videographers met with the faculty and student changemakers to create a promotional video that introduces the organization and its work and will be featured on their website. TommComm admires the Social Innovation Collaboratory&#8217;s dedication to inspiring and enacting social innovation, and we are excited to work with them more in the future.</p>
+		<p>Learn more at <a href="https://www.stthomas.edu/socialinnovation/">the Social Innovation Collaboratory.</a>
+
+
+		<h4>Tony Fisher</h4>
+		<div id= "clients_flex">
+			<div id="clients1">
+				<img src="images/tony.jpg" class="client_image">
+			</div>
+			<div id="clients2">
+				<img src="images/tony.jpg" class="client_image">
+			</div>
+			<div id="clients3">
+				<img src="images/tony.jpg" class="client_image">
+			</div>
+		</div>		
+		<p>Tony Fisher is a UST alum, a former Target executive, and now the owner and president of K1 Sportswear. When asked to speak at the April 2017 First Friday event, Tony knew he wanted to involve students throughout the entire process. TommComm workedclosely with Tony and his mentee, Amanda Post, to structure the content, create the visuals, and plan the logistics of his presentation.</p>
+		<p>Learn more about <a href="https://www.linkedin.com/in/tonysfisher/">Tony Fisher.</a> 		
+
+	<h4>Ascension</h4>
+		<div id= "clients_flex">
+			<div id="clients1">
+				<img src="images/Ascension-Cloud-Steps.png" class="client_image">
+			</div>
+			<div id="clients2">
+				<img src="images/Ascension-Written-Logo.png" class="client_image">
+			</div>
+			<div id="clients3">
+				<img src="images/Ascension-Cloud-Steps.png" class="client_image">
+			</div>
+		</div>		
+		<p>text text text texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext text text text text texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext text text texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext text text texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext text text texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext text text texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext text text texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext texttext text</p> 
+		<p>Learn more at URL GOES HERE</p>
+
+	</div>
+
+		<div id="footer">
+			<div id="footer_flex">
+				<div id="column_x1">
+					<ul>
+						<li><a name="About" href="#about">About</a></li>
+						<li><a name="story" href="story.html">Our Story</a></li>
+						<li><a name="team" href="#team">Our Team</a></li>
+						<li><a name="services" href="#services">Services</a></li>
+						<br>
+					</ul>
+				</div>
+				<div id="column_x2">
+					<ul>
+						<li><a name="clients" href="#clients">Clients</a></li>
+						<li><a name="employment" href="#employment">Students</a></li>
+						<li><a name="FAQ" href="#FAQ">FAQ</a></li>
+						<li><a name="contact" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div id="column_y">
+					<p>A new student-led communications agency</p>
+					<br>
+					<a class="smi" href="mailto:tommiecommunications@gmail.com">m</a>
+					<a class="smi" href="https://www.facebook.com" target="_blank">f</a>
+					<a class="smi" href="https://www.instagram.com" target="_blank">i</a>
+				</div>
+				<div id="column_z">
+						<p>&#169;TommComm 2017</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TommComm</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="style.css" />
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+  			acc[i].onclick = function() {
+    			this.classList.toggle("active");
+    			var panel = this.nextElementSibling;
+    			if (panel.style.maxHeight){
+      				panel.style.maxHeight = null;
+    			} else {
+      			panel.style.maxHeight = panel.scrollHeight + "px";
+    			} 
+  			}
+		}
+	</script>
+
+	<script>
+		$(document).ready(function() {
+    		function close_accordion_section() {
+        		$('.accordion .accordion-section-title').removeClass('active');
+        		$('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    		}
+ 
+    		$('.accordion-section-title').click(function(e) {
+        		// Grab current anchor value
+        		var currentAttrValue = $(this).attr('href');
+ 
+        		if($(e.target).is('.active')) {
+            		close_accordion_section();
+        		}else {
+            		close_accordion_section();
+ 
+            		// Add active class to section title
+            		$(this).addClass('active');
+            		// Open up the hidden content panel
+            		$('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+        		}
+ 
+        		e.preventDefault();
+    		});
+		});
+	</script>
+
+	<script>
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+
+</head> 
+<body>
+	<a name="top"></a>
+
+	<div id="hamburger"><a href="#nav" id="hicon">&#x2261;</a></div>
+	<ul id="nav">
+		<div id="logo">
+			<a href="index.html"><img src="images/logo.png" class="logo"></a>
+		</div>
+		<li><a href="#about">ABOUT</a>
+			<ul>
+				<li><a href="story.html">OUR STORY</a></li>
+				<li><a href="team.html">OUR TEAM</a></li>
+			</ul>
+		</li>
+		<li><a href="#services">SERVICES</a>
+			<ul>
+				<li><a href="services.html">FULL LIST</a></li>
+			</ul>
+		</li>
+		<li><a href="#clients">CLIENTS</a>
+			<ul>
+				<li><a href="clients.html">FEATURED CLIENTS</a></li>
+			</ul>
+		</li>
+		<li><a href="#employment">STUDENTS</a></li>
+		<li><a href="#contact">CONTACT</a></li>
+	</ul>
+	
+	
+	<div id="story">
+		<h2><a name="story" href="#top">OUR STORY</a></h2>
+		<p>Tommie Communications began as an idea presented to a class of St. Thomas students. It didn&#8217;t have a vision, a workplace, or even a name. What it did have was 12 dedicated students, strong faculty and community support, and a catchy nickname: TommComm.</p>
+		
+		<p>Today, TommComm is a full-service student-run communications agency. We partner with <i>real</i> clients on <i>real</i> projects so our employees gain <i>experience</i> in the communication field. And because we aren&#8217;t perfect, we have experienced faculty advisers who help us along the way.</p>
+		
+		<p>TommComm knows that students have talents, knowledge, and perspectives that are valuable to organizations throughout the community. Our work benefits not only our clients, but also the people they serve and our student employees. Helping these simultaneously highlights TommComm&#8217;s dedication to advancing the common good.</p>
+				
+		<p><i>As a student-run communications agency, TommComm represents today&#8217;s creativity by delivering innovative and strategic results in a principled and dependable manner to ensure our clients&#8217; goals become realities.</i></p>
+	</div>
+
+		<div id="footer">
+			<div id="footer_flex">
+				<div id="column_x1">
+					<ul>
+						<li><a name="About" href="#about">About</a></li>
+						<li><a name="values" href="#values">Values</a></li>
+						<li><a name="team" href="#team">Our Team</a></li>
+						<li><a name="services" href="#services">Services</a></li>
+						<br>
+					</ul>
+				</div>
+				<div id="column_x2">
+					<ul>
+						<li><a name="clients" href="#clients">Clients</a></li>
+						<li><a name="employment" href="#employment">Students</a></li>
+						<li><a name="FAQ" href="#FAQ">FAQ</a></li>
+						<li><a name="contact" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div id="column_y">
+					<p>A new student-led communications agency</p>
+					<br>
+					<a class="smi" href="mailto:tommiecommunications@gmail.com">m</a>
+					<a class="smi" href="https://www.facebook.com" target="_blank">f</a>
+					<a class="smi" href="https://www.instagram.com" target="_blank">i</a>
+				</div>
+				<div id="column_z">
+						<p>&#169;TommComm 2017</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+</html>
